@@ -7,11 +7,6 @@ import { Tours } from "./components/Tours";
 export const ToursPage = () => {
   const classes = useStyles();
 
-  useEffect(() => {
-    document.title = "Our tours";
-  });
-
-  const [loading, setLoading] = useState(true);
   const [tours, setTours] = useState([]);
 
   useEffect(() => {

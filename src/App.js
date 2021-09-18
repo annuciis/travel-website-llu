@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { makeStyles } from "@material-ui/core/styles";
+
+import { TitlePage } from "./components/TitlePage";
+
+const useStyles = makeStyles({
+  root: {
+    backgroundImage:
+      "url(https://youmatter.world/app/uploads/sites/2/2019/11/travel-world.jpg)",
+    width: "100%",
+    height: "100vh",
+    backgroundSize: "cover",
+  },
+});
 
 function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.root}>
+      {/* <NavBar /> */}
+      <TitlePage />
+      {/* <Content /> */}
     </div>
   );
 }

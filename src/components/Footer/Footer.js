@@ -28,10 +28,11 @@ export const Footer = () => {
         py: 3,
         px: 2,
         mt: "auto",
-        position: "absolute",
         bottom: 0,
         width: "100%",
-        backgroundColor: "#7cc5ca",
+        backgroundColor: "#49a6ed",
+        position: "fixed",
+        padding: "10px 10px 0px 10px",
       }}
     >
       <Container maxWidth="sm">

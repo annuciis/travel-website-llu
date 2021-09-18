@@ -1,4 +1,4 @@
-import { SideBarComponent } from "./components";
+import { SideBarComponent } from "./components/SideBarComponent";
 import { Box, Drawer } from "@mui/material";
 
 const drawerWidth = 240;

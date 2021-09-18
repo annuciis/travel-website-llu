@@ -4,7 +4,13 @@ export const useStyles = makeStyles({
   mainBox: {
     flexGrow: 1,
     textAlign: "center",
-    padding: "13vw 0",
+    backgroundImage:
+      "url(https://youmatter.world/app/uploads/sites/2/2019/11/travel-world.jpg)",
+    backgroundSize: "cover",
+    display: "table",
+  },
+  inlineBox: {
+    verticalAlign: "middle",
   },
   headings: {
     fontFamily: "'Alfa Slab One', cursive",
@@ -13,10 +19,10 @@ export const useStyles = makeStyles({
     textShadow:
       "-1px 1px 0 #000, 1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000",
   },
-  headingMain: {
-    fontSize: "clamp(2rem, 9vw, 5rem)",
-  },
-  headingSecond: {
-    fontSize: "clamp(0.75rem, 5vw, 3rem)",
+  exploreNowButton: {
+    marginTop: "3rem",
+    "@media screen and (max-width: 619px)": {
+      marginTop: "5rem",
+    },
   },
 });

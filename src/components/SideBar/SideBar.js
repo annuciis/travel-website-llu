@@ -1,4 +1,4 @@
-import { SideBarComponent } from "./components/SideBarComponent";
+import { SideBarList } from "./components/SideBarList";
 import { Box, Drawer } from "@mui/material";
 
 const drawerWidth = 240;
@@ -22,20 +22,7 @@ export const SideBar = ({ handleDrawerToggle, isOpen }) => {
           },
         }}
       >
-        {<SideBarComponent handleDrawerToggle={handleDrawerToggle} />}
-      </Drawer>
-      <Drawer
-        variant="permanent"
-        sx={{
-          display: "none",
-          "& .MuiDrawer-paper": {
-            boxSizing: "border-box",
-            width: drawerWidth,
-          },
-        }}
-        open
-      >
-        {<SideBarComponent handleDrawerToggle={handleDrawerToggle} />}
+        {<SideBarList handleDrawerToggle={handleDrawerToggle} />}
       </Drawer>
     </Box>
   );

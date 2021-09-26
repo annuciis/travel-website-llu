@@ -1,11 +1,11 @@
-import { Box, Toolbar, Container, Button } from "@mui/material";
+import { Toolbar, Container, Button } from "@mui/material";
 import { useStyles } from "./TitlePage.styles";
 import { Link } from "react-router-dom";
 
 export const TitlePage = () => {
   const classes = useStyles();
   return (
-    <Box component="main" className={classes.mainBox}>
+    <main className={classes.mainBox}>
       <Toolbar />
       <Container
         sx={{ paddingLeft: 0, display: "table-cell" }}
@@ -24,6 +24,6 @@ export const TitlePage = () => {
           </Link>
         </div>
       </Container>
-    </Box>
+    </main>
   );
 };

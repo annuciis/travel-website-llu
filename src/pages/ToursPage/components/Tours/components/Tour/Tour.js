@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { useStyles } from "./Tour.styles";
 
-export const Tour = ({ id, image, info, price, name, tourId }) => {
+export const Tour = ({
+  id,
+  image,
+  info,
+  price,
+  name,
+  tourId,
+  favoriteTourId,
+}) => {
   const classes = useStyles();
   const [readMore, setReadMore] = useState(false);
 
@@ -15,13 +23,24 @@ export const Tour = ({ id, image, info, price, name, tourId }) => {
         </div>
         <p>
           {readMore ? info : `${info.substring(0, 200)}...`}
-          <button onClick={() => setReadMore(!readMore)}>
+          <button
+            className={classes.expandButton}
+            onClick={() => setReadMore(!readMore)}
+          >
             {readMore ? "show less" : "read more"}
           </button>
         </p>
-        <button className={classes.deleteButton} onClick={() => tourId(id)}>
-          not interested
-        </button>
+        <div className={classes.actionButtons}>
+          <button className={classes.deleteButton} onClick={() => tourId(id)}>
+            not interested
+          </button>
+          <button
+            className={classes.addButton}
+            onClick={() => favoriteTourId(id)}
+          >
+            add to favorites
+          </button>
+        </div>
       </footer>
     </article>
   );

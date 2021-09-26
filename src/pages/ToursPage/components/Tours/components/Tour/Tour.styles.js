@@ -17,10 +17,8 @@ export const useStyles = makeStyles({
     },
 
     "& button": {
-      background: "transparent",
-      borderColor: "transparent",
       textTransform: "capitalize",
-      color: "#49A6E9",
+      background: "transparent",
       fontSize: "1rem",
       cursor: "pointer",
       paddingLeft: "0.25rem",
@@ -28,6 +26,10 @@ export const useStyles = makeStyles({
     "& footer": {
       padding: "1.5rem 2rem",
     },
+  },
+  expandButton: {
+    borderColor: "transparent",
+    color: "#49A6E9",
   },
   tourInfo: {
     display: "flex",
@@ -45,16 +47,22 @@ export const useStyles = makeStyles({
     padding: "0.25rem 0.5rem",
     bordeRadius: "0.25rem",
   },
-
+  actionButtons: {
+    "& button": {
+      width: 200,
+      letterSpacing: "0.1rem",
+      padding: "0.25rem 0.5rem",
+      borderRadius: "0.25rem",
+      marginRight: "1rem",
+      marginBottom: "0.6rem",
+    },
+  },
   deleteButton: {
-    display: "block",
-    width: 200,
-    margin: "1rem auto 0 auto",
     color: "#da4748",
-    letterSpacing: "0.1rem",
-    background: "transparent",
     border: "1px solid #da4748",
-    padding: "0.25rem 0.5rem",
-    borderRadius: "0.25rem",
+  },
+  addButton: {
+    color: "#2e8953",
+    border: "1px solid #2e8953",
   },
 });

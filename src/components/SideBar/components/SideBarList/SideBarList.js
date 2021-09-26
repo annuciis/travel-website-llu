@@ -6,9 +6,9 @@ import {
   Reviews as ReviewsIcon,
 } from "@mui/icons-material";
 import { ChevronLeft } from "@material-ui/icons";
-import { SideBarListItem } from "../SideBarListItem";
+import { SideBarListItem } from "./components/SideBarListItem";
 
-export const SideBarComponent = ({ handleDrawerToggle }) => {
+export const SideBarList = ({ handleDrawerToggle }) => {
   return (
     <div>
       <Toolbar sx={{ position: "relative" }}>

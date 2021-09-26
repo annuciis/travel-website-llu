@@ -25,6 +25,6 @@ export const reviews = [
     name: "Eve Leroy",
     country: "France",
     image: "https://randomuser.me/api/portraits/women/78.jpg",
-    text: "A superb week exploring Rome. This was my first visit to Rome, and it was wonderful. I will definitely book again with this agency!",
+    text: "A superb week exploring Rome. This was my first visit to Rome, and it was wonderful. I will definitely book again with this agency and go with all my family members and friends!",
   },
 ];

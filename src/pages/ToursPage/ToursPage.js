@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Box } from "@mui/material";
 import { useStyles } from "./TourPage.styles";
 import { AllTours } from "../../utils/Tours";
 import { Tours } from "./components/Tours";
+import { ToursInfoWindow } from "./components/ToursInfoWindow";
 
 export const ToursPage = () => {
   const classes = useStyles();
 
   const [tours, setTours] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     setTours(AllTours);
@@ -16,6 +17,11 @@ export const ToursPage = () => {
   const removeTour = (id) => {
     const newToursList = tours.filter((tour) => tour.id !== id);
     setTours(newToursList);
+  };
+
+  const addToFavorite = (id) => {
+    const newFavoriteTour = tours.find((tour) => tour.id === id);
+    setFavorites([...favorites, newFavoriteTour]);
   };
 
   if (tours.length === 0) {
@@ -35,10 +41,15 @@ export const ToursPage = () => {
   }
 
   return (
-    <Box component="main" className={classes.mainBox}>
+    <main className={classes.mainBox}>
       <div className={classes.inlineBox}>
-        <Tours tours={tours} tourId={removeTour} />
+        <ToursInfoWindow tours={tours} />
+        <Tours
+          tours={tours}
+          favoriteTourId={addToFavorite}
+          tourId={removeTour}
+        />
       </div>
-    </Box>
+    </main>
   );
 };

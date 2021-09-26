@@ -21,7 +21,15 @@ export const ContactInfoWindow = () => {
   return (
     <div>
       <Button
-        sx={{ position: "absolute", right: 25, top: 17 }}
+        sx={{
+          position: "absolute",
+          right: 25,
+          top: 17,
+          "@media screen and (max-width: 740px)": {
+            right: 10,
+            top: 80,
+          },
+        }}
         onClick={handleOpen}
       >
         Open modal

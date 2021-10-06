@@ -4,7 +4,7 @@ import { AllTours } from "../../utils/Tours";
 import { Tours } from "./components/Tours";
 import { ToursInfoWindow } from "./components/ToursInfoWindow";
 
-export const ToursPage = () => {
+export const ToursPage = ({ favoritesState }) => {
   const classes = useStyles();
 
   const [tours, setTours] = useState([]);
@@ -17,6 +17,8 @@ export const ToursPage = () => {
   const removeTour = (id) => {
     const newToursList = tours.filter((tour) => tour.id !== id);
     setTours(newToursList);
+    const newFavorites = favorites.filter((tour) => tour.id !== id);
+    setFavorites(newFavorites);
   };
 
   const addToFavorite = (id) => {
@@ -45,7 +47,7 @@ export const ToursPage = () => {
       <div className={classes.inlineBox}>
         <ToursInfoWindow tours={tours} />
         <Tours
-          tours={tours}
+          tours={favoritesState ? favorites : tours}
           favoriteTourId={addToFavorite}
           tourId={removeTour}
         />

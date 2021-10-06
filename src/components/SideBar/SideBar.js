@@ -3,13 +3,13 @@ import { Box, Drawer } from "@mui/material";
 
 const drawerWidth = 240;
 
-export const SideBar = ({ handleDrawerToggle, isOpen }) => {
+export const SideBar = ({ handleDrawerToggle, isSideBarOpen }) => {
   return (
     <Box component="nav" sx={{ width: 0 }} aria-label="mailbox folders">
       <Drawer
         id="side-bar"
         variant="temporary"
-        open={isOpen}
+        open={isSideBarOpen}
         onClose={handleDrawerToggle}
         ModalProps={{
           keepMounted: true,

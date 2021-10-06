@@ -17,19 +17,30 @@ const useStyles = makeStyles({
 
 export const App = () => {
   const classes = useStyles();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isSideBarOpen, setisSideBarOpen] = useState(false);
+  const [isFavOpen, setIsFavOpen] = useState(false);
 
   const handleDrawerToggle = () => {
-    setIsOpen(!isOpen);
+    setisSideBarOpen(!isSideBarOpen);
+  };
+
+  const handleFavoritesOpen = () => {
+    setIsFavOpen(!isFavOpen);
   };
 
   return (
     <div className={classes.root}>
       <Router>
         <CssBaseline />
-        <NavBar handleDrawerToggle={handleDrawerToggle} />
-        <SideBar handleDrawerToggle={handleDrawerToggle} isOpen={isOpen} />
-        <WebPages />
+        <NavBar
+          handleDrawerToggle={handleDrawerToggle}
+          handleFavoritesOpen={handleFavoritesOpen}
+        />
+        <SideBar
+          handleDrawerToggle={handleDrawerToggle}
+          isSideBarOpen={isSideBarOpen}
+        />
+        <WebPages favoritesState={isFavOpen} />
         <Footer />
       </Router>
     </div>

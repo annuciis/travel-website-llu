@@ -6,11 +6,16 @@ import { ReviewsPage } from "./ReviewsPage";
 import { TitlePage } from "./TitlePage";
 import { ToursPage } from "./ToursPage";
 
-export const WebPages = () => {
+export const WebPages = ({ favoritesState }) => {
   return (
     <React.Fragment>
       <Route exact path="/" component={TitlePage} />
-      <Route path="/tours" component={ToursPage} />
+      <Route
+        path="/tours"
+        render={(props) => (
+          <ToursPage {...props} favoritesState={favoritesState} />
+        )}
+      />
       <Route path="/reviews" component={ReviewsPage} />
       <Route path="/contacts" component={ContactsPage} />
     </React.Fragment>

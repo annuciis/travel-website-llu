@@ -17,13 +17,19 @@ export const ToursPage = ({ favoritesState }) => {
   const removeTour = (id) => {
     const newToursList = tours.filter((tour) => tour.id !== id);
     setTours(newToursList);
-    const newFavorites = favorites.filter((tour) => tour.id !== id);
-    setFavorites(newFavorites);
   };
 
   const addToFavorite = (id) => {
     const newFavoriteTour = tours.find((tour) => tour.id === id);
     setFavorites([...favorites, newFavoriteTour]);
+
+    if (document.getElementById(id).textContent === "remove from favorites") {
+      const newFavorites = favorites.filter((tour) => tour.id !== id);
+      setFavorites(newFavorites);
+      document.getElementById(id).textContent = "add to favorites";
+    } else {
+      document.getElementById(id).textContent = "remove from favorites";
+    }
   };
 
   if (tours.length === 0) {
@@ -43,9 +49,9 @@ export const ToursPage = ({ favoritesState }) => {
   }
 
   return (
-    <main className={classes.mainBox}>
+    <main id="tours-page" className={classes.mainBox}>
       <div className={classes.inlineBox}>
-        <ToursInfoWindow tours={tours} />
+        <ToursInfoWindow favoritesState={favoritesState} tours={tours} />
         <Tours
           tours={favoritesState ? favorites : tours}
           favoriteTourId={addToFavorite}

@@ -1,12 +1,22 @@
 import { AppBar, Toolbar, Typography, IconButton } from "@mui/material";
 import { Menu as MenuIcon, Favorite, Tour } from "@mui/icons-material";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const NavBar = ({ handleDrawerToggle, handleFavoritesOpen }) => {
   const [isFavNotOpen, setIsFavNotOpen] = useState(false);
   useEffect(() => {
     setIsFavNotOpen(!isFavNotOpen);
   }, [handleFavoritesOpen]);
+
+  const Icon = () => {
+    if (window.location.href.includes("tour") && isFavNotOpen) {
+      return <Favorite />;
+    } else {
+      return <Tour />;
+    }
+  };
+
   return (
     <AppBar color="primary" position="fixed">
       <Toolbar>
@@ -22,14 +32,15 @@ export const NavBar = ({ handleDrawerToggle, handleFavoritesOpen }) => {
         <Typography variant="h6" noWrap component="div">
           Responsive drawer
         </Typography>
-        <IconButton
-          color="inherit"
-          aria-label="open favorites"
-          onClick={handleFavoritesOpen}
-          sx={{ mr: 1, position: "absolute", right: 0 }}
-        >
-          {isFavNotOpen ? <Favorite /> : <Tour />}
-        </IconButton>
+        <Link style={{ mr: 1, position: "absolute", right: 0 }} to="/tours">
+          <IconButton
+            color="inherit"
+            aria-label="open favorites"
+            onClick={handleFavoritesOpen}
+          >
+            {<Icon />}
+          </IconButton>
+        </Link>
       </Toolbar>
     </AppBar>
   );

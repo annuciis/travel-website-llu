@@ -18,7 +18,7 @@ const style = {
   p: 4,
 };
 
-export const ToursInfoWindow = ({ tours }) => {
+export const ToursInfoWindow = ({ tours, favoritesState }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -26,6 +26,10 @@ export const ToursInfoWindow = ({ tours }) => {
   return (
     <div>
       <Button
+        style={
+          favoritesState ? { display: "none" } : { display: "inline-flex" }
+        }
+        id="tours-info-table"
         sx={{ position: "absolute", right: 35, top: 80 }}
         onClick={handleOpen}
       >

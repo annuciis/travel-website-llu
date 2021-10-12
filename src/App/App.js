@@ -25,6 +25,10 @@ export const App = () => {
   };
 
   const handleFavoritesOpen = () => {
+    if (!window.location.href.includes("tour")) {
+      setIsFavOpen(false);
+      return;
+    }
     setIsFavOpen(!isFavOpen);
   };
 

@@ -37,17 +37,8 @@ export const Tour = ({
           <button
             id={id}
             className={classes.addButton}
-            onClick={(e) => {
-              if (
-                document.getElementById(e.target.id).style.backgroundColor ===
-                "red"
-              ) {
-                return;
-              } else {
-                document.getElementById(e.target.id).style.backgroundColor =
-                  "red";
-                return favoriteTourId(id);
-              }
+            onClick={() => {
+              return favoriteTourId(id);
             }}
           >
             add to favorites

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { List, ListItem, ListItemText, ListItemIcon } from "@mui/material";
+import { ListItem, ListItemText, ListItemIcon } from "@mui/material";
 
 export const SideBarListItem = ({ handleDrawerToggle, icon, name, link }) => {
   return (

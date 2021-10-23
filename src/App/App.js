@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     width: "100%",
     minHeight: "100vh",
     display: "flex",
+    position: "relative",
   },
 });
 

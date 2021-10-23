@@ -31,7 +31,7 @@ export const Footer = () => {
         bottom: 0,
         width: "100%",
         backgroundColor: "#49a6ed",
-        position: "fixed",
+        position: "absolute",
         padding: "10px 10px 0px 10px",
       }}
     >

@@ -4,6 +4,7 @@ import {
   FlightTakeoff as FlightTakeoffIcon,
   Home as HomeIcon,
   Reviews as ReviewsIcon,
+  Stars as StarsIcon,
 } from "@mui/icons-material";
 import { ChevronLeft } from "@material-ui/icons";
 import { SideBarListItem } from "./components/SideBarListItem";
@@ -20,7 +21,6 @@ export const SideBarList = ({ handleDrawerToggle }) => {
         </IconButton>
       </Toolbar>
       <Divider />
-      {/*first list */}
       <List>
         <SideBarListItem
           handleDrawerToggle={handleDrawerToggle}
@@ -34,14 +34,17 @@ export const SideBarList = ({ handleDrawerToggle }) => {
           name={"Tours"}
           link={"/tours"}
         />
-        {/* </List> */}
-        {/*second list */}
-        {/* <List> */}
         <SideBarListItem
           handleDrawerToggle={handleDrawerToggle}
           icon={<ReviewsIcon />}
           name={"Reviews"}
           link={"/reviews"}
+        />
+        <SideBarListItem
+          handleDrawerToggle={handleDrawerToggle}
+          icon={<StarsIcon />}
+          name={"Rating"}
+          link={"/rating"}
         />
         <SideBarListItem
           handleDrawerToggle={handleDrawerToggle}

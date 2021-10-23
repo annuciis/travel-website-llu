@@ -9,14 +9,6 @@ export const NavBar = ({ handleDrawerToggle, handleFavoritesOpen }) => {
     setIsFavNotOpen(!isFavNotOpen);
   }, [handleFavoritesOpen]);
 
-  const Icon = () => {
-    if (window.location.href.includes("tour") && isFavNotOpen) {
-      return <Favorite />;
-    } else {
-      return <Tour />;
-    }
-  };
-
   return (
     <AppBar color="primary" position="fixed">
       <Toolbar>
@@ -38,7 +30,7 @@ export const NavBar = ({ handleDrawerToggle, handleFavoritesOpen }) => {
             aria-label="open favorites"
             onClick={handleFavoritesOpen}
           >
-            {<Icon />}
+            {<Tour />}
           </IconButton>
         </Link>
       </Toolbar>

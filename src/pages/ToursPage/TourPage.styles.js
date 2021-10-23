@@ -9,7 +9,7 @@ export const useStyles = makeStyles({
   inlineBox: {
     width: "90vw",
     maxWidth: "620px",
-    margin: "8rem auto 5rem",
+    margin: "8rem auto 7rem",
   },
   title: {
     marginTop: "8rem",

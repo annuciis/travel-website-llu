@@ -14,7 +14,12 @@ export const TitlePage = () => {
         </div>
         <div className={classes.exploreNowButton}>
           <Link to="/tours">
-            <Button size="large" variant="contained" color="primary">
+            <Button
+              id="explore-now-btn"
+              size="large"
+              variant="contained"
+              color="primary"
+            >
               Explore now
             </Button>
           </Link>

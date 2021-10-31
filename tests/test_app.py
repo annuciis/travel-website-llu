@@ -13,7 +13,7 @@ class AppTests(unittest.TestCase):
     def test_title_page_go_to_tours(self):
         self.title_page = TitlePage(driver=self.driver)
         self.title_page.explore_button.click()
-        assert self.driver.current_url == 'http://localhost:3000/tours', "Didn't navigate to tours page"
+        assert self.driver.current_url == 'http://localhost:3000/tours', "Didn't navigate to tours page."
         self.tour_page = ToursPage(driver=self.driver)
         assert self.tour_page.tour.count() == 5
 

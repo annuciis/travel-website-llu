@@ -38,6 +38,7 @@ export const ToursPage = ({ favoritesState }) => {
         <div className={classes.title}>
           <h2>no tours left</h2>
           <button
+            id="refresh-button"
             className={classes.refreshToursButton}
             onClick={() => setTours(AllTours)}
           >

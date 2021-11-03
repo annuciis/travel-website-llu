@@ -24,7 +24,7 @@ export const RatingPage = () => {
         setWebsiteValue(0);
         setOfferValue(0);
         setStaffValue(0);
-      }, 500000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, [isRated]);

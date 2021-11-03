@@ -22,7 +22,7 @@ export const NavBar = ({ handleDrawerToggle, handleFavoritesOpen }) => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" noWrap component="div">
-          Responsive drawer
+          TripVision
         </Typography>
         <Link style={{ mr: 1, position: "absolute", right: 0 }} to="/tours">
           <IconButton

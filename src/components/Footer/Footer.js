@@ -1,45 +1,28 @@
-import {
-  AppBar,
-  Container,
-  Toolbar,
-  Typography,
-  Box,
-  Link,
-} from "@mui/material";
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary">
-      {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+import { Container, Typography, Box, Link } from "@mui/material";
+import { Facebook, Twitter } from "@mui/icons-material";
+import { useStyles } from "./Footer.styles";
 
 export const Footer = () => {
+  const classes = useStyles();
   return (
-    <Box
-      component="footer"
-      sx={{
-        py: 3,
-        px: 2,
-        mt: "auto",
-        bottom: 0,
-        width: "100%",
-        backgroundColor: "#49a6ed",
-        position: "absolute",
-        padding: "10px 10px 0px 10px",
-      }}
-    >
-      <Container maxWidth="sm">
-        <Typography variant="body1">
-          My sticky footer can be found here.
+    <Box component="footer" className={classes.footer}>
+      <Container className={classes.footerContainer}>
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          className={classes.copyrightText}
+        >
+          {"Copyright © TripVision "}
+          {new Date().getFullYear()}
         </Typography>
-        <Copyright />
+        <Box className={classes.iconBox}>
+          <a href="https://www.twitter.com" className={classes.icon}>
+            <Twitter />
+          </a>
+          <a href="https://www.facebook.com" className={classes.icon}>
+            <Facebook />
+          </a>
+        </Box>
       </Container>
     </Box>
   );

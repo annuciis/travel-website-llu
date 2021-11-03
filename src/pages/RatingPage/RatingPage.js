@@ -2,21 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Typography, Rating, Box, Button, Modal } from "@mui/material";
 import { useStyles } from "./RatingPage.styles";
 import { Send } from "@mui/icons-material";
-
-const modalStyle = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "40vw",
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  display: "grid",
-  placeItems: "center",
-  margin: "0 auto",
-  boxShadow: 24,
-  p: 4,
-};
+import { RatingModal } from "./components";
 
 export const RatingPage = () => {
   const classes = useStyles();
@@ -38,39 +24,17 @@ export const RatingPage = () => {
         setWebsiteValue(0);
         setOfferValue(0);
         setStaffValue(0);
-      }, 5000);
+      }, 500000);
       return () => clearTimeout(timer);
     }
   }, [isRated]);
 
-  if (isRated) {
-    return (
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={modalStyle}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Thanks for your opinion!
-          </Typography>
-          <Button
-            className={classes.modalButton}
-            variant="contained"
-            onClick={() => {
-              setIsRated(false);
-              setWebsiteValue(0);
-              setOfferValue(0);
-              setStaffValue(0);
-            }}
-          >
-            Close
-          </Button>
-        </Box>
-      </Modal>
-    );
-  }
+  const handleClick = () => {
+    setIsRated(false);
+    setWebsiteValue(0);
+    setOfferValue(0);
+    setStaffValue(0);
+  };
 
   const checkValues = () => {
     if (websiteValue != 0 && offerValue != 0 && staffValue != 0) {
@@ -120,6 +84,13 @@ export const RatingPage = () => {
       >
         Send
       </Button>
+      {isRated && (
+        <RatingModal
+          open={open}
+          handleClose={handleClose}
+          handleClick={handleClick}
+        />
+      )}
     </Box>
   );
 };

@@ -40,7 +40,4 @@ export const useStyles = makeStyles({
     padding: "8rem 0",
     textAlign: "center",
   },
-  modalButton: {
-    marginTop: "1rem !important",
-  },
 });

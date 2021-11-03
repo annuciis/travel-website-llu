@@ -1,7 +1,7 @@
 import { Modal, Box, Typography, Button } from "@mui/material";
-import { useStyles } from "./RatingModalWindow.styles";
+import { useStyles } from "./RatingWindow.styles";
 
-export const RatingModal = ({ open, handleClose, handleClick }) => {
+export const RatingWindow = ({ open, handleClose, handleClick }) => {
   const classes = useStyles();
   return (
     <Modal

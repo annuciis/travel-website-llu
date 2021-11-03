@@ -1,5 +1,5 @@
 import { AppBar, Toolbar, Typography, IconButton } from "@mui/material";
-import { Menu as MenuIcon, Favorite, Tour } from "@mui/icons-material";
+import { Menu as MenuIcon, Tour } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 

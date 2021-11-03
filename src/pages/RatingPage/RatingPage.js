@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Typography, Rating, Box, Button, Modal } from "@mui/material";
 import { useStyles } from "./RatingPage.styles";
 import { Send } from "@mui/icons-material";
-import { RatingModal } from "./components";
+import { RatingWindow } from "./components/RatingWindow";
 
 export const RatingPage = () => {
   const classes = useStyles();
@@ -85,7 +85,7 @@ export const RatingPage = () => {
         Send
       </Button>
       {isRated && (
-        <RatingModal
+        <RatingWindow
           open={open}
           handleClose={handleClose}
           handleClick={handleClick}

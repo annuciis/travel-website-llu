@@ -5,7 +5,7 @@ import { SideBar } from "../components/SideBar";
 import { NavBar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 import { WebPages } from "../pages/WebPages";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {

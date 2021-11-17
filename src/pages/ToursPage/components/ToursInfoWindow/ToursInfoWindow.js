@@ -1,24 +1,11 @@
 import React, { useState } from "react";
 import { Box, Button, Typography, Modal } from "@mui/material";
 
-import { ToursInfoWindowContent } from "./components/TourInfoWindowContent";
-
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "90vw",
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  display: "grid",
-  placeItems: "center",
-  margin: "0 auto",
-  boxShadow: 24,
-  p: 4,
-};
+import { ToursInfoWindowContent } from "../TourInfoWindowContent";
+import { useStyles } from "./ToursInfoWindow.styles";
 
 export const ToursInfoWindow = ({ tours, favoritesState }) => {
+  const classes = useStyles();
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -30,7 +17,7 @@ export const ToursInfoWindow = ({ tours, favoritesState }) => {
           favoritesState ? { display: "none" } : { display: "inline-flex" }
         }
         id="tours-info-table"
-        sx={{ position: "absolute", right: 35, top: 80 }}
+        className={classes.moreInfoButton}
         onClick={handleOpen}
       >
         More info
@@ -41,12 +28,12 @@ export const ToursInfoWindow = ({ tours, favoritesState }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box className={classes.modalWindowStyle}>
           <Typography
             id="modal-modal-title"
             variant="h6"
             component="h2"
-            sx={{ marginBottom: "1rem" }}
+            className={classes.tableTitle}
           >
             Information about tours
           </Typography>

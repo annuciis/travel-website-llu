@@ -1,5 +1,5 @@
 import React from "react";
-import { Tour } from "./components/Tour";
+import { Tour } from "../Tour";
 import { useStyles } from "./Tours.styles";
 
 export const Tours = ({ tourId, tours, favoriteTourId }) => {

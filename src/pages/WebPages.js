@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { ContactsPage } from "./ContactsPage/ContactsPage";
+import { ContactsPage } from "./ContactsPage";
 import { RatingPage } from "./RatingPage";
 import { ReviewsPage } from "./ReviewsPage";
 import { TitlePage } from "./TitlePage";

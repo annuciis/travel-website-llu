@@ -1,4 +1,4 @@
-import { Toolbar, Container, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import { AirportShuttle, BeachAccess, Hiking, Park } from "@mui/icons-material";
 import { useStyles } from "./TitlePage.styles";
 import { Link } from "react-router-dom";

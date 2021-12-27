@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 
 export const NavBar = ({ handleDrawerToggle, handleFavoritesOpen }) => {
   const [isFavNotOpen, setIsFavNotOpen] = useState(false);
+
   useEffect(() => {
     setIsFavNotOpen(!isFavNotOpen);
+    // eslint-disable-next-line
   }, [handleFavoritesOpen]);
 
   return (

@@ -15,6 +15,6 @@ export const useStyles = makeStyles({
     boxShadow: 24,
     padding: "1rem",
   },
-  moreInfoButton: { position: "absolute", right: 35, top: 80 },
+  moreInfoButton: { position: "absolute !important", right: 35, top: 80 },
   tableTitle: { marginBottom: "1rem" },
 });

@@ -30,6 +30,7 @@ export const Review = () => {
       setID(ID + 1);
     }, 8000);
     return () => clearInterval(interval);
+    // eslint-disable-next-line
   }, [ID]);
 
   if (card) {

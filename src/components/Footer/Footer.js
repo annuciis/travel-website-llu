@@ -1,4 +1,4 @@
-import { Container, Typography, Box, Link } from "@mui/material";
+import { Container, Typography, Box } from "@mui/material";
 import { Facebook, Twitter } from "@mui/icons-material";
 import { useStyles } from "./Footer.styles";
 

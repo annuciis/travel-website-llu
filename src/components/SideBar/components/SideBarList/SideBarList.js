@@ -7,7 +7,7 @@ import {
   Stars as StarsIcon,
 } from "@mui/icons-material";
 import { ChevronLeft } from "@material-ui/icons";
-import { SideBarListItem } from "./components/SideBarListItem";
+import { SideBarListItem } from "../SideBarListItem";
 
 export const SideBarList = ({ handleDrawerToggle }) => {
   return (

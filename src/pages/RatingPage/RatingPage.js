@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Typography, Rating, Box, Button, Modal } from "@mui/material";
+import { Typography, Rating, Box, Button } from "@mui/material";
 import { useStyles } from "./RatingPage.styles";
 import { Send } from "@mui/icons-material";
 import { RatingWindow } from "./components/RatingWindow";
@@ -37,7 +37,7 @@ export const RatingPage = () => {
   };
 
   const checkValues = () => {
-    if (websiteValue != 0 && offerValue != 0 && staffValue != 0) {
+    if (websiteValue !== 0 && offerValue !== 0 && staffValue !== 0) {
       setIsRated(true);
       handleOpen();
     }

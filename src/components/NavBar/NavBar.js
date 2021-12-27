@@ -7,7 +7,7 @@ export const NavBar = ({ handleDrawerToggle, handleFavoritesOpen }) => {
   const [isFavNotOpen, setIsFavNotOpen] = useState(false);
   useEffect(() => {
     setIsFavNotOpen(!isFavNotOpen);
-  }, [handleFavoritesOpen]);
+  }, [handleFavoritesOpen, isFavNotOpen]);
 
   return (
     <AppBar color="primary" position="fixed">
